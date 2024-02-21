@@ -1,16 +1,13 @@
 const express = require('express');
-const employee = require('./Controller/EmployeeRoutes');
+const employeeRoute = require('./Controller/EmployeeRoutes');
+
 const app = express(); // Creating Server
 
-app.get('/', (req,res)=>
-{
-    res.status(200).json({"Message:":"App is Working Fine.."})
-})
-
-app.get("/employee", employee)
+//Parsing Recieved Request in JSON
+app.use(express.json());
 
 
-
+app.use("/api/employee", employeeRoute)
 
 module.exports = app;
 
