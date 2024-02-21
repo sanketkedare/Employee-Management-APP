@@ -1,71 +1,75 @@
-## Creatinng React - Mongo - Node App
+# Creating React - Mongo - Node App
 
+## Install
 
-
-# Install 
-
-[Crate Two Modules]
+### Create Two Modules
 
 - React - for Client / Frontend
-- Node  - for Server / Backend
+- Node - for Server / Backend
 
 
 
 
-# Frontend
+## Frontend
 
-- Create React APP [Client]
-  - i.e. npx create-react-app client
-
-
-
-# Backend & Database
-
-- Create Node Module [ Server ]
-- Create server.js [Main JS File]
-- install node and nessesary dependencies
-  - npm init
-  - npm i nodemon express mongoose dotenv
-  - create file .env for adding environment variables
-  - add file .gitignore for ingnoring file from github repository
+- Create React App [Client]
+  - Run the following command:
+    ```
+    npx create-react-app client
+    ```
 
 
-- Create Model for Database related Files
-  - Create Schema.js
-  - Create ConnectToDB.js
 
+## Backend & Database
+
+- Create Node Module [Server]
+  - Create `server.js` [Main JS File]
+  - Install Node and necessary dependencies
+    ```bash
+    npm init
+    npm i nodemon express mongoose dotenv
+    ```
+  - Create file `.env` for adding environment variables
+  - Add file `.gitignore` for ignoring files from the GitHub repository
+
+- Create Model for Database-related Files
+  - Create `Schema.js`
+  - Create `ConnectToDB.js`
 
 - Create Server
   - Setup APIs, Router
 
+- Create `ConnectToDB.js` file
+  - Create a function to connect to MongoDB, export it.
+  - Create a schema to create a collection in MongoDB
+    ```javascript
+    const EmployeeSchema = new mongoose.Schema({ /* ...configuration */ });
+    ```
+  - Create a constant for the model specifying the model
+    ```javascript
+    const EmployeeModel = mongoose.model("Employee", EmployeeSchema, "Employee");
+    ```
+    - Export it `module.exports = { EmployeeModel };`
 
-- Create ConnectToDB.js file
-  - Create a function to connect to Mongo DB , export it.
-  - Create a schema to create collection in mongo
-    - create constant with " new mongoose.Schema({   ..configuration  })";
-    - create constant for model specify model
-      - " const EmployeeModel = mongoose.model("Employee", EmployeeSchema, "Employee"); "
-      - export it ["EmployeeModel"].
-
-      
-
-[NOTE :  Actions for manupilating Data in Database will perform vai " EmployeeModel "]
-
-
-
-
-- Create APIs Like GET , POST , PUT , DELETE
-
-  - GET    :  1] Getting All Employee Data
-              2] Getting Single Employee Data By ID
-
-  - POST   :  Creting New Employee on MongoDB
-
-  - PUT    :  Updating Specific Employee by ID
-
-  - DELETE :  Deleting Specific Employee
+> **Note**: Actions for manipulating data in the database will be performed via `EmployeeModel`.
 
 
 
+- Create APIs Like GET, POST, PUT, DELETE
 
-# Integration - Full Stack
+  - **GET:**
+    1. Getting All Employee Data
+    2. Getting Single Employee Data By ID
+
+  - **POST:**
+    Creating New Employee on MongoDB
+
+  - **PUT:**
+    Updating Specific Employee by ID
+
+  - **DELETE:**
+    Deleting Specific Employee
+
+
+
+## Integration - Full Stack
