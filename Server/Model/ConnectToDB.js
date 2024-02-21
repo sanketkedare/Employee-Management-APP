@@ -1,11 +1,13 @@
 const mongoose = require("mongoose");
+require('dotenv').config();
 
-const DB_URL = "mongodb://localhost:27017/React-Node-APP";
 
 const connectToDB = async() => 
 {
+  const DB_URL = "mongodb://localhost:27017/React-Node-APP"
+
   await mongoose
-    .connect(DB_URL)
+    .connect(DB_URL || process.env.DB_URL)
     .then(() => 
     {
       console.log("Connected to DB");

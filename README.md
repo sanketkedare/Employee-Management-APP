@@ -1,6 +1,6 @@
 # Creating React - Mongo - Node App
 
-## Procedure for **Full Stack Application [MERN] **
+### Procedure for Full Stack Application [MERN]
 
 ### Create Two Modules
 
