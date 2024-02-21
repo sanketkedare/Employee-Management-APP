@@ -1,5 +1,7 @@
 ## Creatinng React - Mongo - Node App
 
+
+
 # Install 
 
 [Crate Two Modules]
@@ -8,15 +10,17 @@
 - Node  - for Server / Backend
 
 
+
+
 # Frontend
 
-- Create React APP 
-  - i.e. npx create-react-app employee-management 
+- Create React APP [Client]
+  - i.e. npx create-react-app client
 
 
 
 # Backend & Database
-- Create Node Module
+- Create Node Module [ Server ]
 - Create server.js [Main JS File]
 - install node and nessesary dependencies
   - npm init
@@ -24,7 +28,12 @@
   - create file .env for adding environment variables
   - add file .gitignore for ingnoring file from github repository
 
+- Create Model for Database related Files
+  - Create Schema.js
+  - Create ConnectToDB.js
+
 - Create Server
+  - Setup APIs
 
 
 
