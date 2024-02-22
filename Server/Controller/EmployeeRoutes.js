@@ -48,6 +48,9 @@ employeeRoute.put("/:id", async (req, res) => {
   const employeeId = req.params.employeeId;
   const updatedData = req.body;
 
+  // console.log("Method Called by Id :",employeeId);
+  // console.log("Data :", updatedData);
+  
   try {
     const updatedEmployee = await EmployeeModel.findOneAndUpdate(
       { _id: employeeId },
