@@ -80,6 +80,14 @@
     npx create-react-app client
     ```
 
+- Creted Routes for Navigation 
+  - List Of All Employees
+  - Page to Create new Employee
+
+- Added functionality to Deleted & Edit Employees
+
+
+
 
 
 
